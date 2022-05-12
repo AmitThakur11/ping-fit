@@ -1,4 +1,4 @@
 import Logo from "./Logo"
 import EmptySlide  from "./EmptySlide"
-
-export {Logo, EmptySlide}
+import VideoGallery from "./VideoGallery"
+export {Logo, EmptySlide,VideoGallery}

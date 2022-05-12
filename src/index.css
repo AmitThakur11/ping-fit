@@ -8,6 +8,7 @@
 --green : #8dc366;
 --dark_purple : #7464a4;
  --grey : #e2e8f0;
+ --shadow : rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 
 }
 *{
