@@ -1,0 +1,15 @@
+.app{
+    width: 70%;
+    
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+}
+
+@media(max-width:480px){
+    .app{
+        width: 100%;
+    }
+}

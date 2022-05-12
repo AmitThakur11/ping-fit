@@ -1,0 +1,153 @@
+.header{
+    z-index: 999;
+    height : 80px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+    align-items: center;
+    width: 100%;
+    padding: 0px 10px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    
+}
+.logoImg{
+    width:70px;
+    height:70px;
+
+}
+.logoName{
+    background-color: black;
+    padding: 4px;
+    border-radius: 4px;
+    line-height: 1.5em;
+}
+.logoName>p{
+    font-size: 24px;
+    font-weight: 900;
+    
+    
+    
+}
+.logoName_first{
+    color:var(--red);
+}
+.logoName_last{
+    color:var(--blue);
+text-align: center;
+}
+.headerTwo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.search{
+    width: 60%;
+    padding: 0px 5px;
+    height: 40%;
+    border-radius: 4px;
+    border:2px solid black;
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    font-size: 16px;
+    transition: ease-in-out 300ms;
+
+}
+.search::placeholder{
+    color:var(--red)
+}
+.search:focus{
+    outline: none;
+    height: 50%;
+    width: 72%;
+
+ 
+    
+}
+.headerThree{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.headerThree >span{
+    display: none;
+}
+
+.headerThree >img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+@media(max-width:480px){
+    .header{
+        position: relative;
+        height : 60px;
+        padding: 0px 8px;
+    }
+    .logo{
+        gap: 3px;
+        
+    }
+    .logoImg{
+        width:50px;
+        height:50px;
+    
+    }
+    .logoName{
+        background-color: black;
+        padding: 3px 6px;
+        border-radius: 4px;
+        line-height: 1.2em;
+    }
+    .logoName>p{
+        font-size: 18px;
+        font-weight: 700;
+        
+        
+        
+    }
+    .headerThree >span{
+        display: block;
+        font-size: 22px;
+        color:var(--red)
+
+    }
+    
+    .headerThree >img{
+        width: 30px;
+        height: 30px;
+        
+    }
+    .search{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        padding: 0px 5px;
+        z-index: 1;
+        transform: translateY(150%);
+        left: 0px;
+        border-radius: 0;
+    }
+
+    .search:focus{
+        outline: none;
+        height: 55%;
+        width: 100%;
+    
+     
+        
+    }
+    .searchHide{
+        transform: translateY(-150%);
+    }
+    
+}
