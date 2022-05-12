@@ -18,7 +18,7 @@
 }
 @media(max-width:480px){
     .videoGallery_videos{
-        grid-gap :0px;
+        grid-gap :4px;
         grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
     }
     

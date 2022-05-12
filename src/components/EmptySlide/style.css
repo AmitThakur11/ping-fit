@@ -44,7 +44,7 @@
 .emptySlide{
     display: flex;
     height: 100%;
-    align-items: flex-start;
+    align-items: center;
 }
 .emptySlide_img{
     display: block;

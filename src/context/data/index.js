@@ -12,6 +12,7 @@ export default function DataProvider({children}) {
     console.log("in input",e.target.value)
     setSearchInput(e.target.value);
   }
+  const clearSearch = ()=>setSearchInput("")
 
 
   useEffect(()=>{
@@ -40,7 +41,8 @@ export default function DataProvider({children}) {
     searchInput : searchInput,
     takeSearchInput : takeSearchInput,
     videoData  : videoData,
-    loading:loading
+    loading:loading,
+    clearSearch : clearSearch
   }
 
   return <dataContext.Provider value={value}>{children}</dataContext.Provider>;

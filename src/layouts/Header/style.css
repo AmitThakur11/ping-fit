@@ -55,10 +55,17 @@
 }
 
 .headerThree >img{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+    border:1px solid;
     cursor: pointer;
     border-radius: 50%;
+}
+.abort{
+    color: var(--red);
+    font-size: 24px;
+    transform: translateX(-120%);
+    cursor: pointer;
 }
 
 @media(max-width:960px){
@@ -127,6 +134,14 @@
         top:5px;
         border-radius: 0;
     }
+    .abort{
+        position: absolute;
+        transform: translateY(165%);
+        top:0px;
+        right: 5px;
+        z-index: 55555;
+    }
+    
 
     .search:focus{
         outline: none;
@@ -139,5 +154,7 @@
     .searchHide{
         transform: translateY(-150%);
     }
-    
+    .abort{
+        display: none;
+    }
 }
