@@ -3,7 +3,7 @@ import axios from "axios"
 import "./style.css";
 
 import ProfileImg from "../../assets/dp.png";
-import Logo  from "../../components/Logo"
+import {Logo}  from "../../components"
 import { HiOutlineSearch } from "react-icons/hi";
 function Header() {
   const [searchToggle, setSearchToggle] = useState(false);

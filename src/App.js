@@ -1,9 +1,10 @@
 import './App.css';
-import Header from "./layouts/Header/"
+import {Header,Content} from "./layouts"
 function App() {
   return (
     <div className="app">
     <Header/>
+    <Content/>
     </div>
   );
 }
