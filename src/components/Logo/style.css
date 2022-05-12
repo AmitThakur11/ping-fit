@@ -6,8 +6,8 @@
     
 }
 .logoImg{
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
 
 }
 .logoName{
@@ -19,7 +19,7 @@
     border-top: 2px solid var(--blue);
 }
 .logoName>p{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
     
     
