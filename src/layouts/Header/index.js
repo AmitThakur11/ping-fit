@@ -23,7 +23,7 @@ function Header() {
         </section>
       <section className="headerThree">
         <span onClick={toggleSearchAction}>
-          <HiOutlineSearch />
+          {!searchToggle ? <HiOutlineSearch /> :<HiX/>} 
         </span>
         <img src={ProfileImg} alt="profile" />
       </section>
