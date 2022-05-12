@@ -2,7 +2,8 @@ import React from "react";
 import { useData } from "../../context/data";
 import "./style.css"
 function VideoGallery() {
-  const { data } = useData();
+  const { data,videoData} = useData();
+  
   return (
     <div className="videoGallery">
       <section className="videoGallery_heading"></section>
