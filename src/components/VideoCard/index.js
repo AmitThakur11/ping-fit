@@ -2,9 +2,13 @@ import React from 'react'
 import "./style.css"
 function VideoCard({videoData,...props}) {
     const {heading,video,tags,text} = videoData
+    const fixUrl = (url)=>{
+      console.log('https' + url.split("").splice(5).join(""))
+      return 'https' + url.split("").splice(4).join("")
+    }
   return (
     <div className="videoCard">
-              <iframe src={video} loading="lazy" title={text}></iframe>
+              <iframe src={fixUrl(video)} loading="lazy" title={text}></iframe>
               <p className="videoCard_heading">{heading}</p>
               <ul className ="tagList">
               {
