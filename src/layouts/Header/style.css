@@ -8,38 +8,7 @@
     padding: 0px 10px;
     
 }
-.logo{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    gap: 5px;
-    
-}
-.logoImg{
-    width:70px;
-    height:70px;
 
-}
-.logoName{
-    background-color: black;
-    padding: 4px;
-    border-radius: 4px;
-    line-height: 1.5em;
-}
-.logoName>p{
-    font-size: 24px;
-    font-weight: 900;
-    
-    
-    
-}
-.logoName_first{
-    color:var(--red);
-}
-.logoName_last{
-    color:var(--blue);
-text-align: center;
-}
 .headerTwo{
     display: flex;
     justify-content: flex-end;
@@ -94,28 +63,7 @@ text-align: center;
         height : 60px;
         padding: 0px 8px;
     }
-    .logo{
-        gap: 3px;
-        
-    }
-    .logoImg{
-        width:50px;
-        height:50px;
-    
-    }
-    .logoName{
-        background-color: black;
-        padding: 3px 6px;
-        border-radius: 4px;
-        line-height: 1.2em;
-    }
-    .logoName>p{
-        font-size: 18px;
-        font-weight: 700;
-        
-        
-        
-    }
+   
     .headerThree >span{
         display: block;
         font-size: 22px;
