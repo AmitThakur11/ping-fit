@@ -106,7 +106,6 @@
 
 @media(max-width:480px){
     .header{
-        position: relative;
         height : 60px;
         padding: 0px 8px;
     }
