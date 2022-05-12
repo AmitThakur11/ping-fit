@@ -10,8 +10,8 @@
     align-items: center;
 }
 .loader >img{
-    width : 65px;
-    height: 65px;
+    width : 85px;
+    height: 85px;
     animation: loader infinite 1.5s 
 }
 

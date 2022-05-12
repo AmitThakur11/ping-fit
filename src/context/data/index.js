@@ -9,6 +9,7 @@ export default function DataProvider({children}) {
   const [loading,setLoading] = useState(false)
   
   const takeSearchInput = (e)=>{
+    console.log("in input",e.target.value)
     setSearchInput(e.target.value);
   }
 
@@ -16,13 +17,17 @@ export default function DataProvider({children}) {
   useEffect(()=>{
     (async()=>{
       try{
-        
+        if(searchInput === ""){
+          setVideoData([])
+          return ;
+        }
+          
         setLoading(true)
         
         const response = await axios.get(`https://asia-south1-socialboat-dev.cloudfunctions.net/assignmentVideos?q=${searchInput}&numResults=20`)
         setLoading(false)
         setVideoData(response.data.results)
-        console.log(response.data.results)
+        console.log(searchInput)
         return response
       }catch(error){
       setLoading(false);

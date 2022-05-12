@@ -4,7 +4,7 @@
     display: grid;
     width: 100%;
     grid-gap :20px;
-    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 .videoCard{
     padding:10px;
@@ -12,7 +12,6 @@
 
 .videoCard > iframe{
     width: 100%;
-    height: 240px;
 }
 .videoCard_heading{
     color:rgb(77, 75, 75);

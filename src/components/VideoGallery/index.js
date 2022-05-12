@@ -11,7 +11,7 @@ function VideoGallery() {
      { videoData.length ? <><section className="videoGallery_heading"></section>
       <section className="videoGallery_videos">
         {videoData.map((data) => {
-          return <VideoCard  videoData = {data}/>
+          return <VideoCard key ={data.heading} videoData = {data}/>
         })}
       </section>
       </> : <EmptySlide />}
