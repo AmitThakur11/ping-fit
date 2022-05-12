@@ -1,4 +1,4 @@
-.emptySlide{
+.emptySlide_data{
     display: flex;
 }
 .emptySlide_img{
@@ -22,10 +22,10 @@
 .emptySlide_text >p{
    color:black;
     width: 80%;
-    font-size:3em;
+    font-size:3rem;
 }
-@media(max-width : 480px){
-    .emptySlide{
+@media(max-width : 960px){
+    .emptySlide_data{
         flex-direction: column;
     }
 
@@ -35,8 +35,21 @@
     }
     .emptySlide_text >p{
         color:black;
-         font-size:1.5em;
+         font-size:2rem;
      }
+    
+     
+}
+@media(max-width : 480px){
+.emptySlide{
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+}
+.emptySlide_img{
+    display: block;
+    flex:1
+}
     
      
 }

@@ -4,11 +4,11 @@ import EmptySlide from "../EmptySlide"
 import VideoCard from "../VideoCard";
 import "./style.css"
 function VideoGallery() {
-  const {videoData} = useData();
+  const {videoData,searchInput} = useData();
   
   return (
     <div className="videoGallery">
-     { videoData.length ? <><section className="videoGallery_heading"></section>
+     { searchInput !== "" ? <><section className="videoGallery_heading"></section>
       <section className="videoGallery_videos">
         {videoData.map((data) => {
           return <VideoCard key ={data.heading} videoData = {data}/>

@@ -1,5 +1,5 @@
 .content{
-    min-height : calc(100vh - 80px );
+    
     padding: 5px 20px;
     
 
@@ -16,7 +16,10 @@
  
         .content{
             
-            margin-top:40px;
+            margin-top:0px;
+            min-height: calc( 100vh - 70px );
+            display: flex;
+            padding: 0;
         }
     
 }
