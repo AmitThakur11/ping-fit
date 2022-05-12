@@ -1,14 +1,15 @@
 import React from "react";
 import { useData } from "../../context/data";
+import EmptySlide from "../EmptySlide"
 import "./style.css"
 function VideoGallery() {
-  const { data,videoData} = useData();
+  const {videoData} = useData();
   
   return (
     <div className="videoGallery">
-      <section className="videoGallery_heading"></section>
+     { videoData.length ? <><section className="videoGallery_heading"></section>
       <section className="videoGallery_videos">
-        {data.results.map(({ heading, text, video, tags }) => {
+        {videoData.map(({ heading, text, video, tags }) => {
           return (
             <div key={heading} className="videoCard">
               <iframe src={video} title={text}></iframe>
@@ -16,7 +17,7 @@ function VideoGallery() {
               <ul className ="tagList">
               {
                   [...new Set(tags)].map((tag)=>{
-                      return <li className ="tag">#{tag}</li>
+                      return <li key={tag} className ="tag">#{tag}</li>
                   })
               }
               </ul>
@@ -24,6 +25,7 @@ function VideoGallery() {
           );
         })}
       </section>
+      </> : <EmptySlide/>}
     </div>
   );
 }

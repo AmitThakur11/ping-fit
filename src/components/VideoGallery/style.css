@@ -7,8 +7,7 @@
     grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
 }
 .videoCard{
-    padding:2px;
-    box-shadow: var(--shadow);
+    padding:10px;
 }
 
 .videoCard > iframe{

@@ -1,0 +1,25 @@
+.loader{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader >img{
+    width : 65px;
+    height: 65px;
+    animation: loader infinite 1.5s 
+}
+
+@keyframes loader {
+    0%{
+        transform:translateX(-50%) rotate(0deg);
+    }
+    50%{transform: translateX(50%) rotate(75deg);}
+    100%{transform: translateX(-50%) rotate(0deg);}
+    
+}
