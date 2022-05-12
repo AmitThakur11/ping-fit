@@ -33,8 +33,7 @@
 text-align: center;
 }
 
-@media(max-width:480px){
-    
+@media(max-width:960px){
     .logo{
         gap: 3px;
         
@@ -58,7 +57,5 @@ text-align: center;
         
     }
       
-    
 
-    
 }
