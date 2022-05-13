@@ -1,12 +1,12 @@
-import React from 'react'
-import Logo from "../../assets/logo.png"
-import "./style.css"
+import React from "react";
+import Logo from "../../assets/logo.png";
+import "./style.css";
 function Loader() {
   return (
-    <div className ="loader">
-    <img src={Logo} alt ="loader" />
+    <div className="loader">
+      <img src={Logo} alt="loader" />
     </div>
-  )
+  );
 }
 
-export default Loader
+export default Loader;

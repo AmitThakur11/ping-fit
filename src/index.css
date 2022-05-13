@@ -1,37 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-:root{
---red : #e83434;
---blue :#ace0f3;
---black : #504a4f;
---purple : #7b69b7;
---yellow: #f3db5c;
---green : #8dc366;
---dark_purple : #7464a4;
- --grey : #e2e8f0;
- --shadow : rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --red: #e83434;
+  --blue: #ace0f3;
+  --black: #504a4f;
+  --purple: #7b69b7;
+  --yellow: #f3db5c;
+  --green: #8dc366;
+  --dark_purple: #7464a4;
+  --grey: #e2e8f0;
+  --shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-link,a,button{
+link,
+a,
+button {
   cursor: pointer;
 }
 body {
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--grey);
-
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.highlight{
-  color:var(--red);
+.highlight {
+  color: var(--red);
 }

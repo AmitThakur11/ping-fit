@@ -1,159 +1,137 @@
-.header{
-    z-index: 999;
-    height : 80px;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr ;
-    align-items: center;
-    width: 100%;
+.header {
+  z-index: 999;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 0px 10px;
+  position: sticky;
+  background: white;
+  top: 0;
+  left: 0;
+}
+
+.headerTwo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+.search {
+  width: 60%;
+  padding: 0px 5px;
+  height: 40%;
+  border-radius: 4px;
+  border: 2px solid black;
+  text-align: left;
+  font-weight: 500;
+  display: flex;
+  font-size: 16px;
+  transition: ease-in-out 300ms;
+}
+.search::placeholder {
+  color: var(--red);
+}
+.search:focus {
+  outline: none;
+  height: 50%;
+  width: 72%;
+}
+.headerThree {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.headerThree > span {
+  display: none;
+}
+
+.headerThree > img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.abort {
+  color: var(--red);
+  font-size: 24px;
+  transform: translateX(-120%);
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .header {
+    height: 60px;
     padding: 0px 10px;
-    position:sticky;
-    background: white;
-    top: 0;
-    left: 0;
-}
-    
-
-
-.headerTwo{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-}
-.search{
-    width: 60%;
+  }
+  .search {
+    width: 70%;
     padding: 0px 5px;
-    height: 40%;
-    border-radius: 4px;
-    border:2px solid black;
-    text-align: left;
-    font-weight: 500;
-    display: flex;
-    font-size: 16px;
-    transition: ease-in-out 300ms;
-
-}
-.search::placeholder{
-    color:var(--red)
-}
-.search:focus{
-    outline: none;
+    height: 45%;
+  }
+  .search::placeholder {
+    color: var(--red);
+  }
+  .search:focus {
     height: 50%;
-    width: 72%;
+    width: 80%;
+  }
 
- 
-    
-}
-.headerThree{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-}
-.headerThree >span{
-    display: none;
-}
-
-.headerThree >img{
-    width: 40px;
-    height: 40px;
-    border:1px solid;
+  .headerThree > img {
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     border-radius: 50%;
+  }
 }
-.abort{
+
+@media (max-width: 480px) {
+  .header {
+    height: 60px;
+    padding: 0px 8px;
+  }
+
+  .headerThree > span {
+    display: block;
+    font-size: 22px;
     color: var(--red);
-    font-size: 24px;
-    transform: translateX(-120%);
-    cursor: pointer;
-}
+  }
 
-@media(max-width:960px){
-    .header{
-        height : 60px;
-        padding: 0px 10px;
-    }
-    .search{
-        width: 70%;
-        padding:0px 5px;
-        height: 45%;
-    
-    }
-    .search::placeholder{
-        color:var(--red)
-    }
-    .search:focus{
-       
-        height: 50%;
-        width: 80%;
-    
-     
-        
-    }
-    
-    
-    .headerThree >img{
-        width: 35px;
-        height: 35px;
-        cursor: pointer;
-        border-radius: 50%;
-    }
- 
-   
+  .headerThree > img {
+    width: 25px;
+    height: 25px;
+  }
+  .search {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    padding: 0px 5px;
+    z-index: 1;
+    transform: translateY(150%);
+    left: 0px;
+    top: 5px;
+    border-radius: 0;
+  }
+  .abort {
+    position: absolute;
+    transform: translateY(165%);
+    top: 0px;
+    right: 5px;
+    z-index: 55555;
+  }
 
-}
-
-
-@media(max-width:480px){
-    .header{
-        height : 60px;
-        padding: 0px 8px;
-    }
-   
-    .headerThree >span{
-        display: block;
-        font-size: 22px;
-        color:var(--red)
-
-    }
-    
-    .headerThree >img{
-        width: 25px;
-        height: 25px;
-        
-    }
-    .search{
-        position: absolute;
-        width: 100%;
-        height: 60%;
-        padding: 0px 5px;
-        z-index: 1;
-        transform: translateY(150%);
-        left: 0px;
-        top:5px;
-        border-radius: 0;
-    }
-    .abort{
-        position: absolute;
-        transform: translateY(165%);
-        top:0px;
-        right: 5px;
-        z-index: 55555;
-    }
-    
-
-    .search:focus{
-        outline: none;
-        height: 65%;
-        width: 100%;
-    
-     
-        
-    }
-    .searchHide{
-        transform: translateY(-150%);
-    }
-    .abort{
-        display: none;
-    }
+  .search:focus {
+    outline: none;
+    height: 65%;
+    width: 100%;
+  }
+  .searchHide {
+    transform: translateY(-150%);
+  }
+  .abort {
+    display: none;
+  }
 }
