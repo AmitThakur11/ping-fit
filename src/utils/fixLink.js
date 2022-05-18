@@ -1,3 +1,3 @@
-export const fixUrl = (url) => {
+export const fixLink = (url) => {
     return "https" + url.split("").splice(4).join("");
   };

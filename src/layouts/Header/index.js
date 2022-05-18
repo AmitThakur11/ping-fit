@@ -4,6 +4,7 @@ import ProfileImg from "../../assets/dp.png";
 import { Logo } from "../../components";
 import { HiOutlineSearch, HiX } from "react-icons/hi";
 import { useData } from "../../context/data";
+
 function Header() {
   const [searchToggle, setSearchToggle] = useState(false);
   const { takeSearchInput, searchInput, clearSearch } = useData();
@@ -13,10 +14,13 @@ function Header() {
     clearSearch();
     toggleSearchAction();
   };
+
   return (
     <header className="header">
+    
       <section className="headerOne">
         <Logo />
+       
       </section>
       <section className="headerTwo">
         <input

@@ -2,11 +2,9 @@ import {
   useContext,
   createContext,
   useState,
-  useEffect,
-  useCallback,
 } from "react";
 import axios from "axios";
-
+import { useDebounce } from "../../utils/useDebounce";
 const dataContext = createContext();
 
 export default function DataProvider({ children }) {
@@ -14,13 +12,11 @@ export default function DataProvider({ children }) {
   const [videoData, setVideoData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const takeSearchInput = (e) => {
-    setSearchInput(e.target.value);
-  };
+ 
   const clearSearch = () => setSearchInput("");
-  async function fetchData() {
+  const fetchData = async(data) => {
     try {
-      if (searchInput === "") {
+      if (data === "") {
         setVideoData([]);
         return;
       }
@@ -28,7 +24,7 @@ export default function DataProvider({ children }) {
       setLoading(true);
 
       const response = await axios.get(
-        `https://asia-south1-socialboat-dev.cloudfunctions.net/assignmentVideos?q=${searchInput}&numResults=20`
+        `https://asia-south1-socialboat-dev.cloudfunctions.net/assignmentVideos?q=${data}&numResults=20`
       );
       setLoading(false);
       setVideoData(response.data.results);
@@ -40,11 +36,12 @@ export default function DataProvider({ children }) {
     }
   }
 
-  const opFetch = useCallback(fetchData, [searchInput]);
-
-  useEffect(() => {
-    (() => opFetch())();
-  }, [opFetch]);
+  const debounceFetch = useDebounce(fetchData,300)
+  const takeSearchInput = (e) => {
+    let text =e.target.value 
+    setSearchInput(text);
+    debounceFetch(text)
+  };
 
   const value = {
     searchInput: searchInput,
