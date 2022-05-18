@@ -1,9 +1,7 @@
 import {
   useContext,
   createContext,
-  useState,
-  useEffect,
-  useCallback,
+  useState
 } from "react";
 import axios from "axios";
 
@@ -14,21 +12,19 @@ export default function DataProvider({ children }) {
   const [videoData, setVideoData] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const takeSearchInput = (e) => {
-    setSearchInput(e.target.value);
-  };
+  
   const clearSearch = () => setSearchInput("");
-  async function fetchData() {
+  async function fetchData(searchText) {
     try {
-      if (searchInput === "") {
-        setVideoData([]);
+      if (searchText.trim().length === 0 || searchInput === "") {
+        setVideoData([])
         return;
       }
 
       setLoading(true);
 
       const response = await axios.get(
-        `https://asia-south1-socialboat-dev.cloudfunctions.net/assignmentVideos?q=${searchInput}&numResults=20`
+        `https://asia-south1-socialboat-dev.cloudfunctions.net/assignmentVideos?q=${searchText}&numResults=20`
       );
       setLoading(false);
       setVideoData(response.data.results);
@@ -39,12 +35,12 @@ export default function DataProvider({ children }) {
       console.log(error);
     }
   }
+  const takeSearchInput = (e) => {
+    let searchItem = e.target.value
+    setSearchInput(searchItem);
+    fetchData(searchItem)
+  };
 
-  const opFetch = useCallback(fetchData, [searchInput]);
-
-  useEffect(() => {
-    (() => opFetch())();
-  }, [opFetch]);
 
   const value = {
     searchInput: searchInput,

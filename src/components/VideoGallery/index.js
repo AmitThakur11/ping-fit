@@ -8,7 +8,7 @@ function VideoGallery() {
 
   return (
     <div className="videoGallery">
-      {searchInput !== "" ? (
+      {videoData.length ? (
         <>
           <section className="videoGallery_heading"></section>
           <section className="videoGallery_videos">
