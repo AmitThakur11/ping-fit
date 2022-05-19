@@ -1,12 +1,23 @@
 .videoGallery {
   width: 100%;
+  
+  position: relative;
 }
 
+
 .videoGallery_videos {
+  margin-top: 40px;
   display: grid;
   width: 100%;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tagItem{
+  padding:10px
+}
+.tagItem >input{
+  margin-right: 4px;
 }
 
 @media (max-width: 960px) {

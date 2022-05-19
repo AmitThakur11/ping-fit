@@ -10,10 +10,14 @@ const dataContext = createContext();
 export default function DataProvider({ children }) {
   const [searchInput, setSearchInput] = useState("");
   const [videoData, setVideoData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  let [loading, setLoading] = useState(false);
+  const [selectedTags,setSelectedtags] = useState([])
 
  
-  const clearSearch = () => setSearchInput("");
+  const clearSearch = () => {
+    setSearchInput("")
+    setVideoData([])
+  };
   const fetchData = async(data) => {
     try {
       if (data === "") {
@@ -43,13 +47,24 @@ export default function DataProvider({ children }) {
     debounceFetch(text)
   };
 
+  const getTags = (videoData)=>{
+    let tags = videoData.reduce((acc,el)=>{
+      return [...acc,...el.tags]
+  },[])
+  return [...new Set(tags)]
+  }
+
   const value = {
     searchInput: searchInput,
     takeSearchInput: takeSearchInput,
     videoData: videoData,
     loading: loading,
     clearSearch: clearSearch,
+    getTags : getTags,
+    selectedTags : selectedTags,
+    setSelectedTags:setSelectedtags
   };
+
 
   return <dataContext.Provider value={value}>{children}</dataContext.Provider>;
 }
